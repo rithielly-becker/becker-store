@@ -1,0 +1,120 @@
+:root {
+    --gap: 16px;  /* Define a default gap value if it's not already defined */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute space between children */
+    align-items: center;
+    /* Align items vertically */
+    padding: 10px;
+    /* Add some padding for better spacing */
+    width: 90vw;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+    /* Add space between navigation items */
+}
+
+.itens {
+    list-style: none;
+    /* Remove default list bullets */
+    display: flex;
+    /* Display list items in a row */
+    gap: 15px;
+    /* Space between list items */
+}
+
+li a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: black;
+    /* Set link color to black */
+    font-weight: bold;
+    /* Make links bold for better visibility */
+}
+
+/* section sobre */
+/* .sobre {
+    width: 90vw;
+    display: flex;
+    margin: auto;
+} */
+
+.sobre {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    gap: 10%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre p {
+    margin: auto;
+    padding: 0.6em;
+}
+
+.sobre img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;  /* Ajuste conforme necessário */
+}
+
+h2 {
+    margin-left: 30px;
+}
+
+/* section flex-container */
+
+.flex-container img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* .flex-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 90vw;
+    height: 60vh;
+    margin: auto;
+} */
+
+.flex-container {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 5%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+footer {
+    display: flex;
+    padding: 16px;
+}
+
+.contatos a {
+    text-decoration: none;
+    color: black;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .sobre {
+        grid-template-columns: 1fr;
+        /* Empilhar colunas em telas menores */
+        gap: var(--gap);
+    }
+
+    .flex-container {
+        grid-template-columns: 1fr;
+        /* Empilhar colunas em telas menores */
+        gap: var(--gap);
+    }
+}
